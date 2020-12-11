@@ -2,34 +2,64 @@
   display: flex;
 }
 
-.side_bar {
+.side-bar {
   background-color: #253141;
   height: 100vh;
   width: 300px;
 }
-.side-header {
+
+.side-bar-header {
+  background-color: #253141;
+  /* なぜ必要なのか */
   height: 100px;
   /* width: 300px;なぜ不要なのか */
   padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.side-main {
+.header-name a{
+  /* a{色} aタグの色を指定して、各疑似クラスの設定は行わない */
+  color: #fafafa;
+  font-size: 16px;
+  text-decoration: none;
+  /* 文字アンダーラインを消す */
+}
+.create-room a{
+  border: solid 1px lightblue;
+  padding: 14px;
+  color: deepskyblue;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.rooms {
   background-color: #2F3E51;
   height: calc(100vh - 100px);
   /* width: 300px;　なぜ不要か */
   padding: 0 20px;
+  overflow: scroll;
+}
+.room {
+  margin: 20px 0 40px;
+}
+.room-name a{
+  color: white;
+  text-decoration: none;
 }
 
-.main_chat {
+
+.chat {
   background-color: #ffffff;
   height: 100vh;
   width: calc(100vw - 300px);
 }
-.main-header {
+.chat-header {
   height: 100px;
   /* width: calc(100vw - 300px);　なぜ不要か */
   padding: 0 40px;
 }
-.main-body {
+.messages {
   background-color: #fafafa;
   height: calc(100vh - 100px - 90px);
   /* width: calc(100vw - 300px);　なぜ不要か */
@@ -37,7 +67,7 @@
   padding: 0 40px;
   /* padding: 46px 40px 0; */
 }
-.main-fotter {
+.form {
   background-color: #dddddd;
   height: 90px;
   /* width: calc(100vw - 300px);　なぜ不要か */
